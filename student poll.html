@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Poll</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .logo {
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 2px;
+            font-size: 26px;
+        }
+        .background-blurspoll {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background-image: url("student poll img.jpg");
+            background-size: cover;
+            background-position: center;
+
+            filter: blur(8px);
+            opacity: 0.25;
+
+            z-index: -1;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <div class="background-blurspoll"></div>
+
+    <!-- NAVBAR -->
+
+    <nav>
+        <div class="nav-logo">
+            <img src="favicon.png" alt="Messlytics Logo">
+            <h2 class="logo">Messlytics</h2>
+        </div>
+        <ul>
+            <li><a href="mess entry.html">Mess Entry</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="ngo.html">NGO Alerts</a></li>
+            <li><a href="student poll.html">Student Poll</a></li>
+            <li><a href="index.html">About</a></li>
+        </ul>
+    </nav>
+
+    <h2 style="text-align:center;margin-top:30px;">
+        Tomorrow's Meal Poll
+    </h2>
+    <div class="form-conatiner">
+
+        <form id="pollForm" style="width:300px;margin:auto;margin-top:30px;">
+            <div class="form-group">
+                <label>Roll Number: </label>
+                <input type="text" id="rollno" required>
+            </div>
+            <br><br>
+            <div class="form-group">
+                <label>Breakfast :</label>
+                <select id="breakfast">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <br><br>
+            <div class="form-group">
+                <label>Lunch :</label>
+                <select id="lunch">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <br><br>
+
+            <div class="form-group">
+                <label>Snacks: </label>
+                <select id="sancks">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <br><br>
+            <div class="form-group">
+                <label>Dinner :</label>
+                <select id="dinner">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <br><br>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

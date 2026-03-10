@@ -1,0 +1,295 @@
+body {
+    font-family: Arial;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+}
+
+button {
+    padding: 10px;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.ngo-card {
+    width: 350px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+}
+
+.ngo-card button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    background: #5b913c;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.ngo-card button:hover {
+    background: #4a7a31;
+}
+
+nav {
+    background: #5b913c;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+logo {
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #dfd21a;
+}
+
+/* page background */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+}
+
+/* form container */
+
+.form-container {
+    width: 450px;
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* form heading */
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* form groups */
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* labels */
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* inputs */
+
+input,
+select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* focus effect */
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #5b913c;
+    box-shadow: 0 0 4px rgba(91, 145, 60, 0.3);
+}
+
+/* button */
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #5b913c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* hover effect */
+
+button:hover {
+    background: #4a7a31;
+}
+
+#rollno {
+    width: 90%;
+}
+
+.impact-section {
+    margin-top: 60px;
+    text-align: center;
+}
+
+
+
+.impact-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.impact-card h3 {
+    font-size: 28px;
+    color: #5b913c;
+}
+
+
+.impact-counter {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.impact-counter h1 {
+    font-size: 80px;
+    color: #4CAF50;
+    margin: 0;
+    font-weight: bold;
+}
+
+.impact-counter p {
+    font-size: 22px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.impact-counter {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.impact-card {
+    text-align: center;
+    font-size: 22px;
+}
+
+.impact-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.impact-counter {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.impact-card {
+    /*background: white;
+    padding: 30px;
+    width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;*/
+
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+
+
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+}
+
+.impact-card h1 {
+    font-size: 42px;
+    color: #5b913c;
+    margin-bottom: 10px;
+}
+
+nav {
+    background: #96c779;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+    font-size: 26px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo img {
+    width: 32px;
+    height: 32px;
+}
+
+.logo {
+    font-family: 'Anton', sans-serif;
+    font-size: 26px;
+    letter-spacing: 2px;
+}

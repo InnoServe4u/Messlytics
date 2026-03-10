@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mess waste Entry</title>
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <style>
+        .logo {
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 2px;
+            font-size: 26px;
+        }
+
+        nav {
+            background: #96c779;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #dfd21a;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <nav>
+
+
+        <div class="nav-logo">
+            <img src="favicon.png" alt="Messlytics Logo">
+            <h2 class="logo">Messlytics</h2>
+        </div>
+
+        <ul>
+            <li><a href="mess entry.html">Mess Entry</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="ngo.html">NGO Alerts</a></li>
+            <li><a href="student poll.html">Student Poll</a></li>
+            <li><a href="index.html">About</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="form-container">
+
+        <h1>College Mess Waste Entry</h1>
+        <form id="wasteForm">
+
+            <div class="form-group">
+                <label>Date:</label>
+                <input type="date" id="date" required>
+            </div>
+
+            <br><br>
+            <div class="form-group">
+                <label>Meal: </label>
+            </div>
+
+            <br><br>
+            <div class="form-group">
+                <select id="meal">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="snacks">Snacks</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+            </div>
+
+            <br><br>
+
+            <div class="form-group">
+                <label>Dish Name:</label>
+                <input type="text" id="dish" required>
+            </div>
+
+            <br><br>
+            <div class="form-group">
+                <label>Quantity Prepared (kg):</label>
+                <input type="number" id="quantity" step="0.01" required>
+            </div>
+            <br><br>
+
+            <div class="form-group">
+                <label>Amount wasted (kg):</label>
+                <input type="number" id="wasted" step="0.01" required>
+            </div>
+            <br><br>
+
+            <div class="form-group">
+                <label>Number of People Served:</label>
+                <input type="number" id="people" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mess Waste Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <style>
+        .logo {
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 2px;
+            font-size: 26px;
+        }
+
+        .prediction-card {
+
+
+            width: 100% !important;
+            padding: 20px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            font-size: 16px;
+        }
+
+        .prediction-card h4 {
+            margin-bottom: 15px;
+
+
+        }
+
+        .accuracy-box {
+            margin-top: 15px;
+        }
+
+        .accuracy-bar {
+            width: 100%;
+            height: 10px;
+            background: #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        #accuracyFill {
+            height: 10px;
+            width: 0%;
+            background: #4CAF50;
+        }
+
+        nav {
+            background: #96c779;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #dfd21a;
+        }
+
+        /* Page styling */
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        /* Graph layout */
+
+        .graph-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        /* Graph cards */
+
+        .graph-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 100% !important;
+
+        }
+
+        /* Make charts responsive */
+
+        canvas {
+            width: 100% !important;
+            height: 300px !important;
+        }
+
+        .graph-card:hover {
+            transform: translateY(-3px);
+            transition: 0.2s;
+        }
+    
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="nav-logo">
+            <img src="favicon.png" alt="Messlytics Logo">
+            <h2 class="logo">Messlytics</h2>
+        </div>
+
+        <ul>
+            <li><a href="mess entry.html">Mess Entry</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="ngo.html">NGO Alerts</a></li>
+            <li><a href="student poll.html">Student Poll</a></li>
+            <li><a href="index.html">About</a></li>
+        </ul>
+    </nav>
+
+    <br><br>
+
+
+
+    <div class="container">
+        <h2>Mess Waste Analytics Dashboard</h2>
+
+        <div class="prediction-card">
+
+            <h4>Tomorrow's Mess Forecast</h4>
+
+            <p><b>Predicted Students:</b> <span id="predStudents">--</span></p>
+
+            <p><b>Recommended Food:</b> <span id="predFood">--</span></p>
+
+            <p><b>Expected Waste:</b> <span id="predWaste">--</span></p>
+
+            <p><b> Recommendation:</b> <span id="aiSuggestion">--</span></p>
+            <div class="accuracy-box">
+                Model Accuracy
+                <div class="accuracy-bar">
+                    <div id="accuracyFill"></div>
+                </div>
+                <span id="predAccuracy"></span>
+            </div>
+
+        </div>
+
+        <br><br>
+        <!--graphs sec-->
+        <div class="graph-grid">
+            <div class="graph-card">
+
+                <h3>Attendance Graph</h3>
+                <canvas id="attendanceChart"></canvas>
+
+
+            </div>
+            <br><br>
+
+            <div class="graph-card">
+
+                <h3>Prepared vs Left-Over</h3>
+                <canvas id="comparisonChart"></canvas>
+            </div>
+
+            <br><br>
+
+            <div class="graph-card">
+                <h3>Waste Trend</h3>
+                <canvas id="wasteChart" width="100" height="50"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+
+<!--<script>
+    setInterval(() => {
+        document.getElementById("attendanceChart").src +=new Date().getTime();
+        document.getElementById("wasteChart").src += new Date().getTime();
+        document.getElementById("comparisonChart").src += new Date().getTime();
+    }, 5000);
+    </script>-->
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+<script src="firebase.js"></script>
+
+<script src="dashboard.js"></script>
+
+
+
+</body>
